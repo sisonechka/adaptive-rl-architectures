@@ -6,15 +6,15 @@ Adaptive NAS for RL agents using PPO in the DM Control Suite (Cheetah). The syst
 - Reduce manual tuning and computation cost
 - Improve performance in dynamic and complex environments
 
-- 🧩 Key Concepts
+🧩 Key Concepts
 - Neural Architecture Search (NAS): A recurrent LSTM controller generates candidate architectures by varying layer count, size, and activation functions.
 - Reinforcement Learning (RL): PPO is used to train agents on proposed architectures.
 - Closed training loop: Architectures are generated → agents are trained → rewards are evaluated → controller is updated.
 
 ⚙️ Architecture Parameters
-Layers: 1 to 5
-Layer Sizes: 64, 128, 256
-Activations: ReLU, Leaky ReLU, Swish
+- Layers: 1 to 5
+- Layer Sizes: 64, 128, 256
+- Activations: ReLU, Leaky ReLU, Swish
 
 Example generated architecture:
 {'pi': [128, 128, 128, 128], 'vf': [128, 128, 128, 128], 'activation': 'relu'}
@@ -50,8 +50,11 @@ Controller is updated and loop repeats
 - LSTM-based NAS controller
 
 📂 Project Structure
+
 ├── nas_controller/         # Architecture generator (LSTM)
+
 ├── ppo_agent/              # PPO training logic
+
 ├── environments/           # DM Control Suite integration
 ├── data/                   # JSON logs and architecture metrics
 └── utils/                  # Helpers and visualization tools
