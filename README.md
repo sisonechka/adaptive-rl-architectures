@@ -19,6 +19,7 @@ Adaptive NAS for RL agents using PPO in the DM Control Suite (Cheetah). The syst
 Example generated architecture:
 {'pi': [128, 128, 128, 128], 'vf': [128, 128, 128, 128], 'activation': 'relu'}
 
+
 🚀 Training Flow
 NAS controller generates candidate architectures
 PPO agent is trained on each candidate for a short cycle
@@ -56,7 +57,9 @@ Controller is updated and loop repeats
 ├── ppo_agent/              # PPO training logic
 
 ├── environments/           # DM Control Suite integration
+
 ├── data/                   # JSON logs and architecture metrics
+
 └── utils/                  # Helpers and visualization tools
 
 👤 Author
