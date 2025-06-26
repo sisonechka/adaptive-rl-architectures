@@ -23,9 +23,13 @@ Example generated architecture:
 🚀 Training Flow
 
 NAS controller generates candidate architectures
+
 PPO agent is trained on each candidate for a short cycle
+
 Top-performing architectures are selected based on average reward
+
 Final architectures undergo longer training for evaluation
+
 Controller is updated and loop repeats
 
 📊 Metrics & Evaluation
